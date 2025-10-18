@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    environment:
+      - MODEL_PATH=/app/models/demo.pt
+      - VITE_BACKEND_URL=http://backend:8000
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+    ports:
+      - "8000:8000"
+    command: uvicorn src.backend.app.main:app --host 0.0.0.0 --port 8000
+
+  frontend:
+    build:
+      context: ./src/frontend
+      dockerfile: Dockerfile.frontend
+    environment:
+      - VITE_BACKEND_URL=http://backend:8000
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+  trainer:
+    build:
+      context: .
+      dockerfile: Dockerfile.train
+    environment:
+      - MODEL_PATH=/workspace/models/demo.pt
+      - HF_TOKEN=${HF_TOKEN:-}
+    volumes:
+      - ./models:/workspace/models
+      - ./data:/workspace/data
+      - ./src:/workspace/src
+      - ./src/train/configs:/workspace/configs
+    command: python src/train/train.py --config configs/default.yaml --save-dir /workspace/models/docker --no-amp

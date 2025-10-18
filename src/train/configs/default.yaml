@@ -1,0 +1,20 @@
+dataset:
+  train_dir: data/demo/train
+  val_dir: data/demo/val
+  image_size: 224
+  eval_batch_size: 32
+  num_workers: 2
+
+training:
+  num_classes: 2
+  backbone: resnet18
+  pretrained: false
+  dropout: 0.2
+  batch_size: 8
+  lr: 0.0003
+  weight_decay: 0.01
+  beta1: 0.9
+  beta2: 0.999
+  epochs: 5
+  label_smoothing: 0.05
+  class_weights: [1.0, 1.0]

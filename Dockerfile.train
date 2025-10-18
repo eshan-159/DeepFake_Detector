@@ -1,0 +1,19 @@
+FROM pytorch/pytorch:2.3.0-cuda12.1-cudnn8-runtime
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /workspace
+
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --upgrade pip && pip install -r /tmp/requirements.txt
+
+COPY src /workspace/src
+COPY src/train/configs /workspace/configs
+
+VOLUME ["/workspace/data", "/workspace/models"]
+
+CMD ["python", "src/train/train.py", "--config", "configs/default.yaml", "--save-dir", "/workspace/models/run"]
