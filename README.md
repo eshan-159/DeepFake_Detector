@@ -234,8 +234,7 @@ Outputs include accuracy, precision, recall, F1-score, ROC-AUC, confusion matrix
 - Model loading: Controlled via `MODEL_PATH` environment variable (defaults to `models/demo.pt`).
 - Grad-CAM overlays saved to `static/saliency/<uuid>.png` and returned via `/saliency` static route.
 
-![Grad-CAM example](docs/assets/gradcam_overlay.png)
-*Figure 4a — Grad-CAM overlay surfaces tampering artifacts that informed the model's decision.*
+
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
