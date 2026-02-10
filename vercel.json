@@ -2,8 +2,15 @@
   "functions": {
     "api/index.py": {
       "runtime": "@vercel/python@5.0.10",
-      "maxDuration": 60,
-      "memory": 1536
+      "maxDuration": 30,
+      "memory": 512
     }
-  }
+  },
+  "routes": [
+    { "src": "/api/predict", "dest": "/api/index.py" },
+    { "src": "/api/metrics", "dest": "/api/index.py" },
+    { "src": "/api/health", "dest": "/api/index.py" },
+    { "src": "/api/docs", "dest": "/api/index.py" },
+    { "src": "/api/(.*)", "dest": "/api/index.py" }
+  ]
 }
