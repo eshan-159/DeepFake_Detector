@@ -7,10 +7,24 @@
 [![Node](https://img.shields.io/badge/node-18.x-8b5cf6.svg)](https://nodejs.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110-8b5cf6.svg)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-18-8b5cf6.svg)](https://react.dev)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/eshan-159/DeepFake_Detector)
 
 ---
 
 > **Responsible AI Notice:** This repository is for research into detecting synthetic media. Never use it to create or distribute deepfakes of real people without their explicit, informed consent.
+
+---
+
+## Screenshots
+
+### Upload Interface
+![Dazza Upload](docs/assets/frontend_placeholder.png)
+
+### Grad-CAM Saliency Overlay
+![Grad-CAM](docs/assets/gradcam_overlay.png)
+
+### Training Metrics
+![Training](docs/assets/training_curve.png)
 
 ---
 
@@ -196,6 +210,77 @@ python src/train/eval.py --checkpoint models/run_001/best.pt --report reports/ru
 ```bash
 docker compose up --build
 ```
+
+---
+
+## Vercel Deployment
+
+Dazza is configured for one-click deployment to Vercel.
+
+### Quick Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/eshan-159/DeepFake_Detector)
+
+### Manual Deployment
+
+1. **Install Vercel CLI:**
+   ```bash
+   npm install -g vercel
+   ```
+
+2. **Login to Vercel:**
+   ```bash
+   vercel login
+   ```
+
+3. **Deploy:**
+   ```bash
+   vercel --prod
+   ```
+
+### Configuration
+
+The `vercel.json` configures the Python serverless function:
+
+```json
+{
+  "functions": {
+    "api/index.py": {
+      "runtime": "@vercel/python@5.0.10",
+      "maxDuration": 60,
+      "memory": 1536
+    }
+  }
+}
+```
+
+### Environment Variables
+
+Set these in your Vercel project settings:
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `MODEL_PATH` | Path to model checkpoint | `models/demo.pt` |
+| `PYTHONPATH` | Python module path | Auto-configured |
+
+### Project Structure for Vercel
+
+```
+├── api/
+│   └── index.py          # Serverless entry point
+├── src/
+│   └── backend/          # FastAPI application
+├── models/
+│   └── demo.pt           # Model checkpoint (optional)
+├── vercel.json           # Vercel configuration
+└── requirements.txt      # Python dependencies
+```
+
+### Notes
+
+- The backend runs as a serverless function at `/api`
+- Frontend can be deployed separately to Vercel or any static host
+- Model checkpoint should be small (<50MB) for serverless or use external storage
 
 ---
 
