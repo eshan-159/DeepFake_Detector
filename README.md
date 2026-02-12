@@ -1,6 +1,7 @@
 <div align="center">
 
-# 🎭 Dazza
+#  Dazza
+<img src="docs/assets/dazza-logo.png" alt="Dazza Logo" width="180"/>
 
 ### AI-Powered Deepfake Detection Platform with Explainable AI
 
