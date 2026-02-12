@@ -2609,13 +2609,7 @@ If you discover a security vulnerability:
 
 <div align="center">
 
-## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=eshan-159/DeepFake_Detector&type=Date)](https://star-history.com/#eshan-159/DeepFake_Detector&Date)
-
----
-
-## 💜 Built with Passion for AI Safety
 
 **Made by Eshan** | [GitHub](https://github.com/eshan-159) | [LinkedIn](https://linkedin.com/in/eshan) | [Portfolio](https://eshan.dev)
 
