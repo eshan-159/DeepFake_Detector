@@ -16,7 +16,7 @@
 [Key Features](#-key-features) • [Live Demo](#-live-demo) • [Architecture](#-system-architecture) • [Quick Start](#-quick-start) • [API Docs](#-api-reference) • [Research](#-research--benchmarks)
 
 ---
-
+##  Frontend UI
 <img src="docs/assets/fruntendui.png" alt="Dazza Platform" width="800"/>
 
 </div>
