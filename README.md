@@ -14,12 +14,12 @@
 **Enterprise-Grade Synthetic Media Detection | Real-Time Analysis | Explainable AI Transparency**
 
 [Key Features](#-key-features) • [Live Demo](#-live-demo) • [Architecture](#-system-architecture) • [Quick Start](#-quick-start) • [API Docs](#-api-reference) • [Research](#-research--benchmarks)
-
+</div>
 ---
 ##  Frontend UI
 <img src="docs/assets/fruntendui.png" alt="Dazza Platform" width="800"/>
 
-</div>
+
 
 ---
 ##  Demo Output
