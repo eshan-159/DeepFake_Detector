@@ -2592,8 +2592,8 @@ Dazza was made possible by:
 
 For enterprise deployments and custom solutions:
 
-**Email**: business@dazza.dev  
-**Website**: https://dazza.dev  
+**Email**: eshan.worke@gmail.com  
+
 **Schedule Consultation**: https://calendly.com/dazza
 
 ### Security
