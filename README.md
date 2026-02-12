@@ -2601,7 +2601,7 @@ For enterprise deployments and custom solutions:
 **Responsible Disclosure:**
 If you discover a security vulnerability:
 1. **DO NOT** open a public issue
-2. Email: security@dazza.dev
+2. Email: eshan.worke@gmail.com
 3. Include detailed reproduction steps
 4. Allow 90 days for patch before disclosure
 
