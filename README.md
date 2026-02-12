@@ -17,12 +17,18 @@
 
 ---
 
-<img src="docs/assets/frontend_placeholder.png" alt="Dazza Platform" width="800"/>
+<img src="docs/assets/fruntendui.png" alt="Dazza Platform" width="800"/>
 
 </div>
 
 ---
+##  Demo Output
 
+
+
+<img src="docs/assets/demo.png" alt="Dazza Platform" width="800"/>
+
+---
 ## 📑 Table of Contents
 
 - [Overview](#-overview)
