@@ -2602,6 +2602,7 @@ If you discover a security vulnerability:
 
 *This tool is designed for defensive research into synthetic media detection.  
 Users must not use it to create, distribute, or facilitate non-consensual deepfakes.*
+THANKS FOR READING
 
 ---
 
