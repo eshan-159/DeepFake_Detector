@@ -164,26 +164,7 @@ Generates visual saliency maps highlighting the exact regions that influenced th
 - 🟢 **Green regions**: Likely authentic
 - 🔵 **Blue regions**: Not relevant to decision
 
-**Use Cases:**
-- **Research**: Understand what artifacts the model detects
-- **Debugging**: Identify if model focuses on correct features
-- **Trust**: Provide users transparency in AI decisions
-- **Forensics**: Generate evidence for manipulation claims
 
-### User Interface Excellence
-
-#### **Premium Design System**
-Dazza features a **space-themed, glass-morphism UI** that combines aesthetics with functionality:
-
-| Design Element | Specification |
-|----------------|---------------|
-| **Color Palette** | Deep space blacks (#030305) with violet accents (#8b5cf6 → #6366f1) |
-| **Typography** | Inter (UI), JetBrains Mono (code/metrics) |
-| **Glass Effects** | 16px backdrop blur, 10% opacity panels |
-| **Border Radius** | 12-16px rounded corners |
-| **Animations** | 200-300ms cubic-bezier transitions |
-| **Shadows** | Multi-layer shadows with violet glow |
-| **Responsiveness** | Mobile-first, breakpoints at 640/768/1024/1280px |
 
 #### **Interactive Features**
 - **Drag & Drop Upload**: Intuitive image upload with visual feedback
